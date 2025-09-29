@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Great Cliffs – Contact</title>
+<style>
+  :root{--accent:#9ed034;--sky:#4288c3;--footer:#ecfab8;--text:#1f2937;--divider:rgba(202,204,202,.6);--ribbon:rgba(255,255,255,.9)}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}
+
+  header{position:relative;width:100%;min-height:400px;padding-top:3em;display:flex;justify-content:center;align-items:flex-start}
+  #contact header{background:no-repeat center/1500px url(images/cliff_rock.jpg), lightgrey}
+
+  /* time bar */
+  #timebar{
+    position:absolute;left:0;right:0;bottom:0;height:36px;line-height:36px;
+    text-align:center;background:linear-gradient(to bottom, rgba(255,255,255,.85), rgba(158,208,52,.20));
+    color:#333;font-weight:600;border-top:1px solid rgba(0,0,0,.06)
+  }
+
+  .main-header{position:relative;background:var(--ribbon);width:760px;height:100px;margin:2em auto 0;padding:0 16px;padding-left:170px;border-radius:6px}
+  .main-header .logo{position:absolute;top:-14px;left:-14px;z-index:5}
+  .main-header .logo img{width:120px;height:auto;display:block}
+
+  .main-menu{position:relative;z-index:10;height:100%}
+  .main-menu ul{display:flex;align-items:stretch;height:100%;margin:0;padding:0;list-style:none}
+  .main-menu li{display:flex;align-items:center;justify-content:center;text-transform:uppercase;font-size:14px}
+  .main-menu li+li{border-left:1px solid var(--divider)}
+  .main-menu a{display:flex;align-items:center;justify-content:center;height:100%;padding:0 36px;text-decoration:none;color:#777}
+  .main-menu a:hover{color:#222}
+  .main-menu li.active{background:var(--accent)}
+  .main-menu li.active a{color:#fff;font-weight:700}
+
+  main{width:min(100%,1100px);margin:36px auto;padding:0 20px}
+  main h1{color:var(--accent);font-size:2rem;margin:0 0 18px}
+
+  .panel{border:2px solid #b6d957;border-radius:6px;padding:16px;background:#fff;max-width:980px;margin-top:8px}
+  label{display:block;margin:.6rem 0 .25rem}
+  input[type="text"],input[type="email"],input[type="tel"],select,textarea{width:100%;padding:.55rem;border:1px solid #cfd8e3;border-radius:4px}
+  fieldset.inline{border:0;padding:0;margin:.75rem 0}
+  fieldset.inline label{display:inline-flex;align-items:center;margin-right:1rem}
+  .actions{text-align:center;margin-top:10px}
+  .btn{background:#4977D1;color:#fff;border:0;border-radius:4px;padding:.7rem 1.4rem;cursor:pointer}
+
+  section{width:100%;background:var(--sky)}
+  #partners{list-style:none;width:min(1200px,100%);padding:2em 0;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:18px}
+  #partners .partner{display:grid;place-items:center;background:#fff;border-radius:50%;width:120px;height:120px}
+  #partners .partner img{width:80px;height:80px;object-fit:contain}
+
+  footer{width:100%;padding:1em 0 1.2em;background:var(--footer)}
+  .footer-inner{width:min(100%,1100px);margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+  form.button input{
+    width: 8em;
+    height: 2.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    /* background-color: #4977D1; */
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body id="contact">
+  <header>
+    <div class="main-header">
+      <div class="logo"><img src="images/logo.png" alt="Great Cliffs Logo"></div>
+      <nav class="main-menu" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cliffs.html">Cliffs</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- live clock bar -->
+    <div id="timebar" role="status" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <h1>Contacting Us</h1>
+    <p>You can drop by the visitors information center at the cliff site that you plan on visiting. They are open 7 days a week from 8:00AM to 5:00PM. You can also contact us directly if you need additional information about the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following.</p>
+    <p><strong>Phone:</strong> (800) GCLIFFS &nbsp; • &nbsp; <strong>Email:</strong> info@greatcliffs.com</p>
+
+    <form class="panel" action="#" method="post">
+      <p style="color:#4977D1;font-weight:700;margin:0 0 .4rem;text-transform:uppercase">Contact Form</p>
+
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" placeholder="John Doe" required>
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="johndoe@gmail.com" required>
+
+      <label for="phone">Phone:</label>
+      <input id="phone" name="phone" type="tel" placeholder="xxx-xxx-xxxx">
+
+      <fieldset class="inline">
+        <legend>How should we contact you?</legend>
+        <label><input type="radio" name="contact_method" value="Email" checked> Email</label>
+        <label><input type="radio" name="contact_method" value="Phone"> Phone</label>
+      </fieldset>
+
+      <label for="cliff">Which Cliff are you inquiring?</label>
+      <select id="cliff" name="cliff">
+        <option>West Cliff</option><option>North Cliff</option><option>East Cliff</option><option>South Cliff</option>
+      </select>
+
+      <label for="how">How did you hear about us:</label>
+      <textarea id="how" name="how" rows="8"></textarea>
+
+      <div class="actions"><button type="submit" class="btn">Inquire</button></div>
+      <div class="commentbox">
+        <lable>How did you hear about us:</lable>
+        <textarea> </textarea>
+      </div>
+      <div class=""ransomcode">
+      <input type="text" name="randomcode" placeholder="Enter characters">
+      </div>
+     <div class="button">
+      <input type="submit" id="submit" value="Inquire">
+      </div>
+    </form>
+  </main>
+
+<section class="partners-band">
+  <ul id="partners"></ul>
+</section>
+
+
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 :: GreatCliffs.com</p>
+      <div>Facebook • Instagram • X</div>
+    </div>
+  </footer>
+
+  <!-- JS at the end so #timebar exists -->
+  <script src="digclock.js"></script>
+  <script src="partners.js"></script>
+</body>
+</html>
